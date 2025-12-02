@@ -10,8 +10,10 @@ for rang in ranges:
     for num in range(int(lower),int(upper)+1):
         num = str(num)
         for sub in range(len(num)-1):
-            if num.count(num[:sub]) * len(num[:sub]) == len(num):
+            #if num[:sub] * len(num)//sub == num
+            if num.count(num[:sub+1]) * len(num[:sub+1]) == len(num):
                 invalids.append(num)
+                break
         #if num.count(num[:len(num)//2]) >= 2 and len(num) % 2 == 0:
             #print(num)
             #invalids.append(num)
